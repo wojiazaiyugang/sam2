@@ -1,6 +1,29 @@
+[tool.poetry]
+name = "sam2"
+version = "0.1.0"
+description = ""
+authors = ["wojiazaiyugang <wojiazaiyugang@outlook.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+torch = "^2.4.1"
+torchvision = "^0.19.1"
+opencv-python = "^4.10.0.84"
+hydra-core = "^1.3.2"
+tqdm = "^4.66.5"
+iopath = "^0.1.10"
+
+[[tool.poetry.source]]
+name = "ustc"
+url = "https://pypi.mirrors.ustc.edu.cn/simple/"
+priority = "primary"
+
+[[tool.poetry.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu118"
+priority = "explicit"
+
 [build-system]
-requires = [
-    "setuptools>=61.0",  
-    "torch>=2.3.1",
-    ]
-build-backend = "setuptools.build_meta"
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
